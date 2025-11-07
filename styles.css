@@ -12,11 +12,23 @@ body {
   height: 100dvh;
   margin: 0;
   padding-top: 3em;
-  background: linear-gradient(45deg, #6a00ff, #ff003c, #9b00ff, #85000b);
+  background: linear-gradient(45deg, #6a00ff, #1a0038, #9b00ff, #85000b);
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;
   color: aqua;
     font-size: 20px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 button {
@@ -29,7 +41,7 @@ button {
   box-shadow:
     0 0 10px rgba(65, 162, 207, 0.459),
     inset 0 0 5px rgba(84, 206, 255, 0.3);
-  color: rgb(49, 2, 255);
+  color: rgb(19, 0, 105);
   cursor: pointer;
   transition: 0.3s;
 }
