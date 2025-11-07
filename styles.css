@@ -1,0 +1,100 @@
+button,
+a,
+input,
+label {
+  -webkit-tap-highlight-color: transparent; /* iOS/Android */
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  padding-top: 3em;
+  background: linear-gradient(45deg, #6a00ff, #ff003c, #9b00ff, #85000b);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  color: aqua;
+    font-size: 20px;
+}
+
+button {
+  font-size: 1.1em;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #54bbff;
+  box-shadow:
+    0 0 10px rgba(65, 162, 207, 0.459),
+    inset 0 0 5px rgba(84, 206, 255, 0.3);
+  color: rgb(49, 2, 255);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #8400ff;
+}
+
+#diceRoll {
+      font-size: 40px;
+}
+
+#textBox {
+  margin: 20px auto;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-size: 30px;
+}
+
+.dice {
+  font-size: 4em;
+  transition: transform 1s ease;
+}
+
+.dice.rolling {
+  animation: rollDice 1s infinite;
+}
+
+@keyframes rollDice {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(180deg); }
+  75% { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Image animation */
+#textBox img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.slide-in {
+  animation: slideIn 0.8s forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.8s forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(-100%); opacity: 0; }
+}
