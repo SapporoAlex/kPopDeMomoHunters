@@ -51,6 +51,7 @@ button:hover {
 }
 
 #diceRoll {
+      margin-top: -20vh;
       font-size: 40px;
 }
 
